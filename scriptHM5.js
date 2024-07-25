@@ -71,7 +71,7 @@ getPerimetr,
 
 //Задание 8
 function getSeason() {
-    let month = prompt("Введите число");
+    let month = prompt("Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы узнаете к какому времени года он относится");
     if (month == 12 || month == 1 || month == 2) {
         alert("Зима");
     } else if (month == 3 || month == 4 || month == 5) {
