@@ -20,7 +20,7 @@ let printSqure = num => num ** 2;
 
 //Задание 4
 function helloUser() {
-    let age = prompt("Сколько Вам лет?"); 
+    const age = prompt("Сколько Вам лет?"); 
     age = Number(age);
     if (age < 0) {
         alert("Вы ввели неправильное значение");
@@ -42,7 +42,7 @@ function multiplyNumbers(a, b) {
 
 //Задание 6
 function cubeNumber() {
-    let n = prompt("Введите число:");
+    const n = prompt("Введите число:");
     n = Number(n);
     if (isNaN(n)) {
         return 'Переданный параметр не является числом'
