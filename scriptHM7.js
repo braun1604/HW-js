@@ -1,4 +1,4 @@
-//Задание 1  Преобразовать строку 'js' в верхний регистр.
+//Задание 1  
 console.log("js".toUpperCase());
 
 //Задание 2 
@@ -23,31 +23,35 @@ console.log(`Наименьшее число: ${min}`);
 console.log(`Наибольшее число: ${max}`);
 
 //Задание 5
-function getRandom() {
-    return Math.random();
-  }
   function randomInteger(min, max) {   
-    let rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
+    let rand = min + Math.random() * (max - 1);
+    return Math.round(rand);
   }
    console.log( randomInteger(1, 10) );
 
 //Задание 6
-function getRandomInt(minValue, maxValue) {
-    return Math.round (Math.random() * (maxValue- minValue)) + minValue;
+function randomMassive(number) {
+  const massive = [];
+  const endofMassive = number / 2;
+  for (i = 0; i < endofMassive; i++) {
+    const randomNumber = Math.round(Math.random() * number);
+    massive.push(randomNumber);
+  }
+  return massive;
 }
-console.log(getRandomInt(5, 10));
+console.log(randomMassive(35));
 
 //Задание 7 
-function getRandomInt(min, max) {
-    return Math.round(Math.random() * (max - min) + min); 
-   } console.log(getRandomInt(2, 9))
+  function getRandomInt(min, max) {
+    return Math.round(Math.random() * (max - min) + min);
+   } 
+   console.log(getRandomInt(2, 9));
 
 //Задание 8
-console.log (new Date());
+console.log(new Date());
 
 //Задание 9
-let currentDate = new Date();
+const currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 73);
 console.log(currentDate);
 
@@ -56,15 +60,13 @@ function ruDateTime() {
     const myDate = new Date();
     const months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-    let ruDateTime = "Дата:" + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " " + days[myDate.getDay()] + "." + "Время:" + myDate.toLocaleTimeString();
+    const ruDateTime = "Дата:" + myDate.getDate() + " " + months[myDate.getMonth()] + " " + myDate.getFullYear() + " " + days[myDate.getDay()] + "." + "Время:" + myDate.toLocaleTimeString();
     return ruDateTime;
 }
-ruDateTime();
-console.log(ruDateTime())
+console.log(ruDateTime());
 
 //Задание 11
 function seasonsBtn() {
-    
     let words = ['яблоко', 'груша', 'дыня', 'виноград', 'персик', 'апельсин', 'мандарин'];
     words = words.sort(() => Math.random() - 0.5);
     alert(words);
@@ -73,12 +75,11 @@ function seasonsBtn() {
    
     let wordsLast = prompt (`Назовите последнее слово`);
    
-
-    if (wordsfirst === words [0] && wordsLast === words[words.length- 1])
+    if (wordsfirst.toLowerCase() === words [0] && wordsLast.toLowerCase() === words[words.length- 1])
      {
         alert `Это правильный ответ!`;
 
-    } else if (wordsfirst === words[0] || wordsLast === words[words.length - 1]) {
+    } else if (wordsfirst.toLowerCase() === words[0] || wordsLast.toLowerCase() === words[words.length - 1]) {
         alert `А счастье было так близко!`;                             
     } 
     else {
